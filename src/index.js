@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from "./App";
+import Checkbox from "./Checkbox";
+import ApiFunctions from "./api-functions";
+
+function AppTwo() {
+  return (
+    <>
+      <h1 align="center">This is the second App</h1>
+      <h2 className='subTitle'>Using fragments</h2>
+    </>
+  )
+}
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>,
+    <AppTwo />
+    <Checkbox />
+    <ApiFunctions login="fabiannb8"/>
+  </React.Fragment>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
